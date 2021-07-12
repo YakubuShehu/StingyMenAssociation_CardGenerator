@@ -1,0 +1,256 @@
+/*
+=====================================
+--- General Styles
+=====================================
+*/
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,500&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: #f8f8f8;
+    margin: 0 auto;
+    height: 100%;
+    line-height: 1.5em;
+    font-family: "PT Sans";
+}
+
+#site-content {
+    padding: 100px 0;
+    margin-bottom: 100px;
+}
+
+.material-ui-shadow {
+    border-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.material-ui-shadow:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+
+@media (max-width: 575.98px) {
+    .material-ui-shadow, .material-ui-shadow:hover {
+        box-shadow: 0 0 0 0;
+    }
+}
+
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+    .material-ui-shadow {
+        border: none;
+        border-radius: 12px;
+    }
+}
+
+
+.text-accent {
+    color: #851c37;
+}
+
+.bg-accent {
+    background-color: #851c37;
+}
+
+.btn-accent, .btn-accent:hover {
+    background-color: #851c37;
+    color: #ffffff;
+}
+
+.btn-outline-accent {
+    border-color: #851c37;
+    color: #851c37;
+}
+
+.btn-outline-accent:hover {
+    background-color: #851c37;
+    color: #ffffff;
+}
+
+
+
+
+/*
+=====================================
+--- 1. Header Section
+=====================================
+*/
+#header-row {
+    margin: 4px;
+    border-radius: 12px;
+    border: solid 3px #851c37;
+}
+
+.header-row__logo-block img {
+    max-width: 100%;   
+}
+
+
+.header-row__logo-block,
+.header-row__title-block {
+    align-self: center;
+}
+
+
+@media (max-width: 767.98px) {
+    .header-row__logo-block img {
+        max-width: 80%;
+    }
+}
+
+
+
+
+/*
+=====================================
+--- 2. ID Card Section
+=====================================
+*/
+.tooltip-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.id-form label {
+    color: #851c37;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.canvas-area  {
+    position: relative;
+    width: 100%;
+    margin: auto;
+
+}
+
+.canvas-item  {
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+}
+
+#mugshotCanvas {
+    position: relative;
+}
+
+
+
+
+
+
+/*
+=====================================
+--- 3. Footer Section
+=====================================
+*/
+#siteFooter {
+    color: #fff;
+    margin-top: auto;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+=====================================
+--- . Archived Styles (for later use)
+=====================================
+*/
+.id-card {
+    position: relative;
+    height: 345px;
+    margin: auto;
+    width: 600px;
+    border-radius: 16px;
+    /*    background-color: rgba(255, 255, 255, 0);*/
+    /*    background-image: url(../img/card-mockup.png);*/
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /*     background: #ffffff; */
+    /*    border-bottom: 5px solid #70291c;*/
+}
+
+@media (max-width: 575.98px) {
+    .id-card {
+        width: 98%;
+        /*        height: 300px;*/
+    }
+}
+
+@media (max-width: 767.98px) {
+    .id-card {
+        width: 95%;
+        height: 100%;
+    }
+}
+
+.id-card__mugshot {
+    position: absolute;
+    right: 55.0px;
+    border-radius: 4px;
+    top: 66px;
+    width: 130px;
+    height: 130px;
+    background: #ffffff;
+    margin-top: 60px;
+}
+
+.id-card__mugshot img {
+    width: 130px;
+    height: 130px;
+    border-radius: 8px;
+}
+
+
+.id-card__details > * {
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    line-height: 1.4;
+    font-weight: 800;
+    color: #851c37;
+    text-transform: uppercase;
+    display: block;
+    width: 60%;
+}
+
+
+.id-card__details-name {
+    position: absolute;
+    top: 130px;
+    left: 160px;
+}
+
+.id-card__details-position {
+    position: absolute;
+    top: 150px;
+    left: 170px;
+}
+
+.id-card__details-branch {
+    position: absolute;
+    top: 170px;
+    left: 167px;
+}
+
+.id-card__details-memberNo {
+    position: absolute;
+    top: 188px;
+    left: 232px;
+}

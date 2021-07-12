@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta property="og:description" content="Be part of the Stingy Men Association (SMA) by generating your membership card.">
+        <meta property="og:title" content="Stingy Men Association - Membership Card Generator">
+        <meta property="og:image" content="https://demo.yakubushehu.com/stingy/assets/img/main-logo.png">
+        <meta property="og:url" content="https://demo.yakubushehu.com/stingy">
+
+        <meta name="description" content="Be part of the Stingy Men Association (SMA) by generating your membership card.">
+
+        <link rel="icon" type="image/png" sizes="251x298" href="assets/img/main-logo.png">
+
+        <title>Stingy Men Association - Membership Card Generator</title>
+
+        <!-- CSS only -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+        <link rel="stylesheet" href="assets/css/style.css">
+
+    </head>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179929420-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-179929420-1');
+    </script>
+
+
+
+    <body id="main" class="">
+
+        <div id="site-content" class="container">
+
+
+
+            <!-- \\ header -->
+            <section id="header-row" class="row p-3 mb-4">
+
+                <div class="col-md-3 header-row__logo-block">
+                    <img src="assets/img/main-logo.png" alt="SMAN" class="mx-auto d-block" draggable="false">
+                </div>
+
+                <div class="col-md-9 header-row__title-block text-center text-md-start">
+                    <h1 class="fw-bolder">Stingy Men Association</h1>
+                    <h3 class="text-accent">Membership Card Generator</h3>
+                    <p class="fw-lighter fst-italic text-muted">Create your Stingy Men Association membership card.</p>
+                </div>
+
+                <hr>
+                <div class="col-12 border border-1 border-secondary rounded p-4 mb-3">
+                    <p>✅ Be part of SMA by generating your membership card. <b>Hold your money tight</b> and continue to make us proud. This SMA membership card maker will <b>save you money!</b></p>
+                </div>
+                <hr>
+
+
+            </section>
+            <!-- // header -->
+
+
+
+
+            <!-- \\ card generator preview + entry form -->
+            <section id="cardDetailsRow" class="card shadow p-3 p-sm-5 m-1">
+
+                <h5 class="tooltip-icon"><a class="text-secondary" href="javascript:void" data-toggle="tooltip" data-placement="left" title="Image not loading? Please try refresing the page."><i class="bi bi-info-circle-fill"></i></a></h5>
+
+                <div class="row">
+
+                    <!-- \\ detail entry form -->
+                    <div class="col-xl-5">
+
+                        <h4 class="fw-bold text-accent">Fill In Your Details:</h4>
+
+                        <form class="id-form">
+                            <div class="mb-3">
+                                <label for="inputCountry" class="form-label mb-0">Country</label>
+                                <select class="form-select" id="inputCountry" name="inputCountry" aria-label="Country Select">
+                                    <option value="na" selected>Namibia</option>
+                                    <option value="">---</option>
+                                    <option value="ao">Angola</option>
+                                    <option value="bw">Botswana</option>
+                                    <option value="cd">Democratic Republic of Congo</option>
+                                    <option value="ls">Lesotho</option>
+                                    <option value="mg">Madagascar</option>
+                                    <option value="mw">Malawi</option>
+                                    <option value="mu">Mauritius</option>
+                                    <option value="sc">Seychelles</option>
+                                    <option value="za">South Africa</option>
+                                    <option value="sz">Swaziland</option>
+                                    <option value="tz">Tanzania</option>
+                                    <option value="zm">Zambia</option>
+                                    <option value="zw">Zimbabwe</option>
+                                    <option value="">---</option>
+                                    <option value="gl">Other (Global)</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputName" class="form-label mb-0">Name</label>
+                                <input type="text" maxLength="25" class="form-control form-control-sm" id="inputName" aria-describedby="inputName" required="true" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputPosition" class="form-label mb-0">Position</label>
+                                <input type="text" maxLength="25" class="form-control form-control-sm" id="inputPosition" aria-describedby="inputPosition" required="true" />
+                            </div>
+                            <div class="row my-3">
+                                <div class="col">
+                                    <label for="inputBranch" class="form-label mb-0">Branch</label>
+                                    <input type="text" maxLength="25" class="form-control form-control-sm" id="inputBranch" aria-describedby="inputBranch" required="true" />
+                                </div>
+                                <div class="col">
+                                    <label for="inputMembershipNo" class="form-label mb-0">Membership No. [auto]</label>
+                                    <input type="text" maxLength="25" class="form-control form-control-sm" id="inputMembershipNo" readonly="true" aria-describedby="inputMembershipNo" required="true" />
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputPhoto" class="form-label mb-0">Photo</label>
+                                <input type="file" class="form-control" id="inputPhoto" aria-describedby="inputPhoto" aria-label="Upload" accept="image/*" />
+                            </div>
+                        </form>
+
+                    </div>
+                    <!-- // detail entry form -->
+
+
+
+                    <!-- \\ ID card preview -->
+                    <div id="idCard" class="col-12 col-xl-7 my-auto mb-4">
+
+                        <div id="canvasArea" class="canvas-area">
+                            <canvas id="cardPreviewCanvas" class="canvas-item" width="1896" height="1090"></canvas>
+                            <canvas id="detailEntryCanvas" class="canvas-item material-ui-shadow"  width="1896" height="1090"></canvas>
+                            <canvas id="mugshotCanvas" class="canvas-item"  width="1896" height="1090"></canvas>
+                        </div>
+
+                        <!-- background image for canvas -->
+                        <img id="canvasBGImg" class="img-fluid d-none" src="assets/img/card-mockup-na.png" alt="SMA Card Mockup" width="1896px" height="1089px">
+
+
+                        <!-- 3rd canvas to combine to -->
+                        <canvas id="canvasRender" class="canvas-area visually-hidden" width="1896" height="1090"></canvas>
+                    </div>
+                    <!-- // ID card preview -->
+
+                </div>
+
+            </section>
+            <!-- // card generator preview + entry form -->
+
+
+
+
+            <!-- \\ download section -->
+            <section id="download-section" class="container text-center mt-5">
+
+                <button id="downloadButton" class="btn btn-lg btn-outline-accent shadow hidden-sm">Download Image <i class="bi bi-download"></i></button>
+
+                <!--  actual download  -->
+                <div id="pseudoDownload" class="visually-hidden">
+                    <a href="#"></a>
+                </div>
+
+            </section>
+            <!-- // download section-->
+
+
+        </div>
+
+
+
+
+        <!-- \\ footer -->
+        <footer id="siteFooter" class="py-3 bg-dark">
+            <div class="container">
+                <h6 class="text-lead">A website <a href="https://timbu.com/nigeria/memes/stingy" target="_blank">"upgrade"</a> made by <a href="https://pressplay.solutions/" target="_blank">Erv</a> &amp; <a href="https://yakubushehu.com" target="_blank">Yak</a> | &copy; 2021</h6>
+                <span class="text-muted small">Made in <img src="assets/img/namibia-flag.svg" class="img-fluid" width="20px" draggable="false" /> for gents, by gents</span><span> ✊🏽</span>
+            </div>
+        </footer>
+        <!-- // footer -->
+
+
+
+
+
+        <!-- JQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+        <!-- Bootstrap -->
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"></script>
+
+        <!-- Toastr -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+
+        <!-- partial -->
+        <script src="assets/js/script_v2.js"></script>
+
+
+    </body>
+
+</html>
