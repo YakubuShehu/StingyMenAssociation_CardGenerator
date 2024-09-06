@@ -210,10 +210,24 @@ function downloadImage(e) {
     e.preventDefault();
     let dataURL = mainCanvas.toDataURL("image/png");
     let dLink = $("#pseudoDownload a");
+    var fileName = "SMA-MembershipCard-" + randomNo.toString() +".png";
     dLink.attr("href", mainCanvas.toDataURL());
-    dLink.attr("download", "SMA-IDCard.png");
+    dLink.attr("download", fileName);
     dLink[0].click();
-    toastr.info('Downloading image...')
+    toastr.info('Downloading image...');
+    
+    $.ajax({
+        type: "POST",
+        url: 'save.php',
+        data: { base64: dataURL, fName: fileName },
+        success: function (response) {
+            console.log(response);
+        },
+        fail: function(xhr, textStatus, errorThrown) {
+            console.log(errorThrown);
+        },
+        cache: false,
+    });
 }
 
 
